@@ -1,0 +1,37 @@
+{
+  "name": "Be Happy - Aplicativo de Controle de Humor",
+  "short_name": "Be Happy",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#dfa400",
+  "background_color": "white",
+  "orientation": "portrait",
+  "description": "Aplicação web simples e objetiva para gestão do humor",
+  "icons": [
+    {
+      "src": "./assets/appicons/android-icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/appicons/android-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/appicons/android-icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/appicons/android-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/appicons/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

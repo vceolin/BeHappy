@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Be Happy</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="manifest"
+      href="./manifest.webmanifest"
+      crossorigin="use-credentials"
+    />
+    <link rel="icon" type="image/png" href="./assets/appicons/favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Be Happy" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/appicons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/appicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/appicons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./assets/appicons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/appicons/apple-icon-180x180.png"
+    />
+    <link rel="stylesheet" href="./tesi.css" />
+    <link rel="stylesheet" href="./behappy.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="./tesi.js"></script>
+    <script src="./behappy.js" type="module"></script>
+    <script src="./chart.js" type="module"></script>
+  </head>
+  <body>
+    <header class="headerBar dark">
+      <div class="appName">Be Happy</div>
+      <div class="badge warning"><span id="estado">0</span></div>
+    </header>
+
+    <div id="tela1" class="component">
+      <div class="componentHeader">
+        <h1 class="componentTitle">Meus humores</h1>
+        <button id="btnAdic" class="button primary">
+          <img src="./assets/plus1.png" />
+        </button>
+      </div>
+      <div class="componentContent">
+        <!-- sem humor -->
+        <div id="blank">
+          <img src="./assets/sad.png" />
+          <p>Parece que você ainda não inseriu nenhum humor... Insira um clicando no +!</p>
+        </div>
+        <!-- gráfico -->
+        <div id="blank">
+          <div>
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <ul id="listaDeHumores" class="list hidden"></ul>
+      </div>
+    </div>
+
+    <!----------INSERT---------->
+    
+    <div id="tela2" class="component hidden">
+      <div class="componentHeader">
+        <h1 class="componentTitle">Inserir Humor</h1>
+      </div>
+      <div class="componentContent">
+        <div class="field">
+          <label for="inputDate">Data:</label>
+          <input id="inputDate" type="date" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label for="inputHumor">Humor:</label>
+          <input id="inputHumor" type="number" autocomplete="off" min="1" max="5" />
+        </div>
+        <div class="field">
+          <label for="inputDescHumor">Fale mais sobre como você se sentiu:</label>
+          <textarea id="inputDescHumor" rows="4" cols="150"></textarea>
+        </div>
+        <div class="buttonGroup mt1 end">
+          <button id="btnCanc1" class="button quarter light">Cancelar</button>
+          <button id="btnInc" class="button quarter primary" disabled>
+            Incluir
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!----------UPDATE---------->
+
+    <div id="tela3" class="component hidden">
+      <div class="componentHeader">
+        <h1 class="componentTitle">Alteração de humor</h1>
+      </div>
+      <div class="componentContent">
+        <div class="field">
+          <label for="inputAlteraDate">Data:</label>
+          <input id="inputAlteraDate" type="date" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label for="inputAlteraHumor">Humor:</label>
+          <input id="inputAlteraHumor" type="number" autocomplete="off" min="1" max="5" />
+        </div>
+        <div class="field">
+          <label for="inputAlteraDescHumor">Fale mais sobre como você se sentiu:</label>
+          <textarea id="inputAlteraDescHumor" rows="4" cols="150"></textarea>
+        </div>
+
+        <div class="buttonGroup end mt1">
+          <button id="btnCanc2" class="button quarter light">Cancelar</button>
+          <button id="btnAlt" class="button quarter primary">Alterar</button>
+        </div>
+        <div class="buttonGroup end mt3">
+          <button id="btnDel" class="button quarter danger">
+            Apagar humor
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
